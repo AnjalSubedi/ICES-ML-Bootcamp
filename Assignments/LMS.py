@@ -1,3 +1,4 @@
+"""This program is a library management sstem which chcks the availability of books and displays it to the user"""
 class Book:
     """
     This class represents a book in the library.
@@ -88,21 +89,21 @@ class Library:
             print(book)
 
 # Example Usage
-# Create instances of Book
-book1 = Book("The Great Gatsby", "F. Scott Fitzgerald", 1)
+book1 = Book("The Great Gatsby", "Anjal Subedi", 1)
 book2 = Book("1984", "George Orwell", 2)
+book3 = Book("It ends with us", "Collen Hoover", 3)
 
 # Create an instance of Library
-library = Library("City Library")
+library = Library("Pokhara Library")
 
 # Add books to the library
 library.add_book(book1)
 library.add_book(book2)
-
+library.add_book(book3)
 # Borrow and return books
-library.borrow_book_by_id(1)
+library.return_book_by_id(1)
 library.return_book_by_id(2)
-library.borrow_book_by_id(2)
+library.return_book_by_id(3)
 
 # Print the inventory of books
 library.get_inventory()
